@@ -7,6 +7,18 @@ import os
 # Load environment variables
 load_dotenv()
 
+# Database path configuration - use absolute path for Streamlit compatibility
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.getenv("DB_PATH", os.path.join(SCRIPT_DIR, "data", "lancedb"))
+TABLE_NAME = os.getenv("TABLE_NAME", "docling")
+
+# Debug: Print paths for troubleshooting (only in development)
+if os.getenv("DEBUG", "false").lower() == "true":
+    print(f"Script directory: {SCRIPT_DIR}")
+    print(f"DB_PATH: {DB_PATH}")
+    print(f"TABLE_NAME: {TABLE_NAME}")
+    print(f"Current working directory: {os.getcwd()}")
+
 # Initialize Azure OpenAI client
 client = AzureOpenAI(
     api_key=os.getenv("AZURE_OPENAI_API_KEY"),
