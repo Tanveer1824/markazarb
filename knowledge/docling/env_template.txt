@@ -7,7 +7,7 @@ AZURE_OPENAI_API_VERSION=2024-02-15-preview
 
 # Model Deployment Names
 # For chat completions (GPT-4, GPT-3.5-turbo, etc.)
-AZURE_OPENAI_CHAT_DEPLOYMENT_NAME=your-chat-deployment-name
+AZURE_OPENAI_DEPLOYMENT_NAME=your-chat-deployment-name
 
 # For embeddings (text-embedding-3-large, text-embedding-ada-002, etc.)
 AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME=your-embedding-deployment-name
@@ -15,5 +15,5 @@ AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME=your-embedding-deployment-name
 # Example values (replace with your actual values):
 # AZURE_OPENAI_API_KEY=sk-1234567890abcdef...
 # AZURE_OPENAI_ENDPOINT=https://myresource.openai.azure.com/
-# AZURE_OPENAI_CHAT_DEPLOYMENT_NAME=gpt-4
+# AZURE_OPENAI_DEPLOYMENT_NAME=gpt-4
 # AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME=text-embedding-3-large
